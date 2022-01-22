@@ -1,5 +1,7 @@
 # Listagem de Filmes
 
+[![Vídeo Demonstração](https://github.com/marcolucianodev/list-movies/blob/master/public/list-movies.png)](https://www.linkedin.com/posts/marcolucianodev_frontend-frontenddeveloper-react-ugcPost-6890523067207041025-JRob)
+
 Projeto Listagem de filmes desenvolvido em react com styled-components, consumindo a API do TMDB.
 
 As listagens dos filmes são separados por gêneros e com scroll lateral para vizualização.
