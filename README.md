@@ -1,10 +1,12 @@
 # Listagem de Filmes
 
-[![Vídeo Demonstração](https://github.com/marcolucianodev/list-movies/blob/master/public/list-movies.png)](https://www.linkedin.com/posts/marcolucianodev_frontend-frontenddeveloper-react-ugcPost-6890523067207041025-JRob)
+[![Projeto Online](https://github.com/marcolucianodev/list-movies/blob/master/public/list-movies.png)](https://react-list-movies.netlify.app/)
 
 Projeto Listagem de filmes desenvolvido em react com styled-components, consumindo a API do TMDB.
 
 As listagens dos filmes são separados por gêneros e com scroll lateral para vizualização.
+
+[Link do Projeto Online](https://react-list-movies.netlify.app/)
 
 
 ### Pré-requisitos
