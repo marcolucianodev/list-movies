@@ -1,5 +1,7 @@
 # Listagem de Filmes
 
+[![Vídeo Demonstração](https://github.com/marcolucianodev/list-movies/blob/master/public/list-movies.png)](https://www.linkedin.com/posts/marcolucianodev_frontend-frontenddeveloper-react-ugcPost-6890523067207041025-JRob)
+
 Projeto Listagem de filmes desenvolvido em react com styled-components, consumindo a API do TMDB.
 
 As listagens dos filmes são separados por gêneros e com scroll lateral para vizualização.
@@ -8,17 +10,20 @@ As listagens dos filmes são separados por gêneros e com scroll lateral para vi
 ### Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Npm]. 
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/), [Npm](https://www.npmjs.com/). 
 Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
 ### 🎲 Rodando a aplicação
 
 ```bash
 # Clone este repositório
-$ git clone <https://github.com/marcolucianodev/list-movies>
+$ git clone https://github.com/marcolucianodev/list-movies
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd list-movies
+
+# Instale as dependências
+$ npm install
 
 # Execute a aplicação
 $ npm start
@@ -31,3 +36,5 @@ $ npm start
 As seguintes ferramentas foram usadas na construção do projeto:
 
 - [React](https://pt-br.reactjs.org/)
+- [Styled Components](https://styled-components.com/)
+- [API Tmdb](https://www.themoviedb.org/documentation/api?language=pt-BR)
