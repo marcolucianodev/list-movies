@@ -6,6 +6,8 @@ Projeto Listagem de filmes desenvolvido em react com styled-components, consumin
 
 As listagens dos filmes são separados por gêneros e com scroll lateral para vizualização.
 
+Ao clicar em um determinado filme, logo se abre a página com os detalhes deste filme. Feature desenvolvida com react router.
+
 [Link do Projeto Online](https://react-list-movies.netlify.app/)
 
 
