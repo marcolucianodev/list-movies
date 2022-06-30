@@ -1,30 +1,21 @@
-import React, { useState, useEffect } from "react";
-import Tmdb from "./components/Tmdb/Tmdb.js"
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import GlobalStyle from "./components/styles"
-import MovieRow from "./components/MovieRow";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
+import Home from "./pages/Home/index.jsx";
+import Details from "./pages/Details/index.jsx";
 
 const App = () => {
 
-  const [movieList, setMovieList] = useState([]);
-
-  useEffect(() => {
-    const loadAll = async () => {
-      let list = await Tmdb.getHomeList();
-      setMovieList(list);
-    }
-
-    loadAll();
-  }, []);
-
   return (
     <>
-      <section className="main--container">
-        {movieList.map((item, key) => (
-            <MovieRow key={key} title={item.title} items={item.items} />
-          ))}
-      </section>
-      <Footer />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/details/:id" element={<Details />} />
+        </Routes>
+
+        <Footer />
+      </BrowserRouter>
       
 
       <GlobalStyle />

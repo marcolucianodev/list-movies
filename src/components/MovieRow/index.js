@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { MovieRowContainer, MovieRowLeft, MovieRowRight, MovieRowListArea, MovieRowList } from './styles.js';
+import { Link } from "react-router-dom";
+import { 
+    MovieRowContainer,
+    MovieRowLeft, 
+    MovieRowRight, 
+    MovieRowListArea, 
+    MovieRowList 
+} from './styles.js';
 
 
 const MovieRow = ({title, items}) => {
@@ -42,9 +49,11 @@ const MovieRow = ({title, items}) => {
                     
                     }}>
 
-                    {items.results.length > 0 && items.results.map((item, key) => (
-                        <div key={key} className="movieRow--item">
+                    {items.results.length > 0 && items.results.map((item) => (
+                        <div key={item.id} className="movieRow--item">
+                            <Link to={`/details/${item.id}`}>
                             <img src={`https://image.tmdb.org/t/p/w300${item.poster_path}`} alt={item.original_title} />
+                            </Link>
                         </div>
                     ))}
 
