@@ -19,7 +19,9 @@ const Home = () => {
   return (
     <section>
       <div className="main--container">
-        {movieList.map((item, key) => (
+        {movieList.length === 0 && <p>Carregando Filmes...</p> }
+        {movieList.length > 0 &&
+          movieList.map((item, key) => (
             <MovieRow key={key} title={item.title} items={item.items} />
           ))}
       </div>

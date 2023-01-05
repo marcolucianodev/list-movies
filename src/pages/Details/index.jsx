@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Container } from "./styles";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../../components/Tmdb/Tmdb";
@@ -8,6 +8,12 @@ import { API_KEY } from "../../components/Tmdb/Tmdb";
 const Details = () => {
 
   const { id } = useParams();
+
+  const navigate = useNavigate();
+
+  const handleNavigate = () => {
+    navigate(-1)
+  }
 
   const [movieList, setMovieList] = useState({});
 
@@ -42,7 +48,7 @@ const Details = () => {
           <h1>{movieList.title}</h1>
           <span className="sinopse">{movieList.sinopse}</span>
           <span className="release">{movieList.releaseDate}</span>
-          <Link to="/"><button>Voltar</button></Link>
+          <button onClick={handleNavigate}>Voltar</button>
         </div>
       </div>
     </Container>
