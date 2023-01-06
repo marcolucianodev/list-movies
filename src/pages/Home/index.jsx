@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Tmdb from "../../components/Tmdb/Tmdb.js";
 import MovieRow from "../../components/MovieRow";
+import Loader from "../../components/Loader"
 
 
 const Home = () => {
@@ -19,7 +20,8 @@ const Home = () => {
   return (
     <section>
       <div className="main--container">
-        {movieList.length === 0 && <p>Carregando Filmes...</p> }
+        {/* {movieList.length === 0 && <p>Carregando Filmes...</p> } */}
+        {movieList.length === 0 && <Loader /> }
         {movieList.length > 0 &&
           movieList.map((item, key) => (
             <MovieRow key={key} title={item.title} items={item.items} />

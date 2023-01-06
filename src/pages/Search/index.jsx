@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import { MovieBox } from "./styles";
+import { MovieBox, MoviesContent, SearchMovieContainer } from "./styles";
 
 import { searchFetch } from "../../components/Tmdb/SearchData";
+import Loader from "../../components/Loader";
 
 
 const Search = () => {
@@ -25,24 +26,22 @@ const Search = () => {
     // }
 
     //ADD NEW HERE
-    const resTeste = async () => {
+    const searchAllMovies = async () => {
         const list = await searchFetch(query)
         setSearchMovies(list)
     }
 
     useEffect(() => {      
-        //   searchTopRated();
-
-          resTeste()
+          searchAllMovies()
     }, [query])
 
 
     return (
-        <>
-        <h1>Resultados para: <span>{query}</span></h1>
-        <section>
-            <div className="main--container" style={{display:"flex", flexWrap:"wrap"}}>
-                {searchMovies.length === 0 && <p>Carregando Filmes...</p> }
+        <SearchMovieContainer>
+            <h1>Resultados para: <span>{query}</span></h1>
+            <MoviesContent>
+                {/* {searchMovies.length === 0 && <p>Carregando Filmes...</p> } */}
+                {searchMovies.length === 0 && <Loader />}
                 {searchMovies.length > 0 &&
                     searchMovies.map((movie) => (
                     <MovieBox key={movie.id}>
@@ -51,9 +50,8 @@ const Search = () => {
                         </Link>
                     </MovieBox>
                 ))}
-            </div>
-        </section>
-        </>
+            </MoviesContent>
+        </SearchMovieContainer>
     )
 }
 

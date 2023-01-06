@@ -7,6 +7,7 @@ import {
     MovieRowListArea, 
     MovieRowList 
 } from './styles.js';
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 
 const MovieRow = ({title, items}) => {
@@ -35,10 +36,10 @@ const MovieRow = ({title, items}) => {
         <MovieRowContainer>
             <h2>{title}</h2>
             <MovieRowLeft onClick={handleLeftArrow}>
-                <span>&lt;</span>
+                <span><IoIosArrowBack /></span>
             </MovieRowLeft>
             <MovieRowRight onClick={handleRightArrow}>
-                <span>&gt;</span>
+                <span><IoIosArrowForward /></span>
             </MovieRowRight>
 
             <MovieRowListArea>

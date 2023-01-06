@@ -11,12 +11,10 @@ import {
 
 import { ImVideoCamera } from "react-icons/im";
 import { FaSearch } from "react-icons/fa";
-import Menu from "../Menu";
 
 const Header = () => {
 
     const [ search, setSearch ] = useState("");
-    const [ input, setInput ] = useState(false);
 
     const navigate = useNavigate();
 
@@ -29,10 +27,6 @@ const Header = () => {
         setSearch("")
     }
 
-    const handleClickSearchButton = () => {
-        setInput(!input)
-    }
-
     return (
         <Container>
             <Brand>
@@ -40,19 +34,15 @@ const Header = () => {
                     <ImVideoCamera size={48}/> <span>ListMovie</span>
                 </Link>
             </Brand>
-            <Menu />
             <Search>
                 <FormSearch onSubmit={handleSubmit}>
-                    {input &&
-                        <InputSearch 
-                            type="text"
-                            onChange={(e) => setSearch(e.target.value)}
-                            value={search}
-                            placeholder="Busque um filme"
-                            className={input ? "input-is-open" : "input-is-closed"}
-                        />
-                    }
-                    <SearchButton type="submit" onClick={handleClickSearchButton}>
+                    <InputSearch 
+                        type="text"
+                        onChange={(e) => setSearch(e.target.value)}
+                        value={search}
+                        placeholder="Busque um filme"
+                    />
+                    <SearchButton type="submit">
                         <FaSearch size={16} />
                     </SearchButton>
                 </FormSearch>

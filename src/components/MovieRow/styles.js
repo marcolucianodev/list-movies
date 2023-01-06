@@ -30,7 +30,11 @@ export const MovieRowContainer = styled.div `
         padding: 10px 0 0 30px;
     }
     
-    ${MovieRowLeft}:hover  {
+    /* ${MovieRowLeft}:hover  {
+        opacity: 1;
+    } */
+
+    :hover ${MovieRowLeft} {
         opacity: 1;
     }
 `
