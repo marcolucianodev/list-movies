@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
-import Tmdb from "../../components/Tmdb/Tmdb.js";
+// import Tmdb from "../../components/Tmdb/Tmdb.js";
 import MovieRow from "../../components/MovieRow";
 import Loader from "../../components/Loader"
+
+import getHomeList2 from "../../components/Tmdb/Tmdb.js";
 
 
 const Home = () => {
@@ -10,7 +12,8 @@ const Home = () => {
 
   useEffect(() => {
     const loadAll = async () => {
-      let list = await Tmdb.getHomeList();
+      // let list = await Tmdb.getHomeList();
+      let list = await getHomeList2();
       setMovieList(list);
     }
 
@@ -20,7 +23,6 @@ const Home = () => {
   return (
     <section>
       <div className="main--container">
-        {/* {movieList.length === 0 && <p>Carregando Filmes...</p> } */}
         {movieList.length === 0 && <Loader /> }
         {movieList.length > 0 &&
           movieList.map((item, key) => (
