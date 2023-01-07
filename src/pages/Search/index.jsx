@@ -13,26 +13,15 @@ const Search = () => {
     const [searchParams] = useSearchParams()
     const query = searchParams.get("q")
 
-    // const API_KEY = '75a925ab7a227e572033e0d7fcc3b9d3'
-    // const BASE_URL = "https://api.themoviedb.org/3/search/movie/"
-
-    // const searchTopRated = async () => {
-
-    //     const res = await fetch(`${BASE_URL}?&language=pt-BR&api_key=${API_KEY}&query=${query}`)
-    //     const data = await res.json()
-
-    //     setTopRatedMovies(data.results)
-
-    // }
-
-    //ADD NEW HERE
-    const searchAllMovies = async () => {
-        const list = await searchFetch(query)
-        setSearchMovies(list)
-    }
-
     useEffect(() => {      
-          searchAllMovies()
+
+        const searchAllMovies = async () => {
+            const list = await searchFetch(query)
+            setSearchMovies(list)
+        }
+
+        searchAllMovies()
+
     }, [query])
 
 
@@ -40,7 +29,6 @@ const Search = () => {
         <SearchMovieContainer>
             <h1>Resultados para: <span>{query}</span></h1>
             <MoviesContent>
-                {/* {searchMovies.length === 0 && <p>Carregando Filmes...</p> } */}
                 {searchMovies.length === 0 && <Loader />}
                 {searchMovies.length > 0 &&
                     searchMovies.map((movie) => (
