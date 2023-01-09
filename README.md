@@ -1,12 +1,18 @@
-# Listagem de Filmes
+# Projeto List Movies
 
-[![Projeto Online](https://github.com/marcolucianodev/list-movies/blob/master/public/list-movies.png)](https://react-list-movies.netlify.app/)
+[![Projeto Online](https://github.com/marcolucianodev/list-movies/blob/master/public/miniatura-listmovies.png)](https://react-list-movies.netlify.app/)
 
-Projeto Listagem de filmes desenvolvido em react com styled-components, consumindo a API do TMDB.
+Projeto Listagem de filmes desenvolvido em React e Styled-components, consumindo a API do TMDB.
 
-As listagens dos filmes são separados por gêneros e com scroll lateral para vizualização.
+As listagens dos filmes são separadas por categorias e com scroll lateral para vizualização.
 
-Ao clicar em um determinado filme, logo se abre a página com os detalhes deste filme. Feature desenvolvida com react router.
+Ao clicar em um determinado filme, logo se abre a página com os detalhes e informações deste filme.
+
+[![Projeto Online](https://github.com/marcolucianodev/list-movies/blob/master/public/list-movies-img02.png)](https://react-list-movies.netlify.app/)
+
+Contém um filtro de busca por filmes, sendo possível procurar determinado filme pelo nome.
+
+[![Projeto Online](https://github.com/marcolucianodev/list-movies/blob/master/public/list-movies-img03.png)](https://react-list-movies.netlify.app/)
 
 [Link do Projeto Online](https://react-list-movies.netlify.app/)
 
@@ -42,3 +48,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [React](https://pt-br.reactjs.org/)
 - [Styled Components](https://styled-components.com/)
 - [API Tmdb](https://www.themoviedb.org/documentation/api?language=pt-BR)
+- [Axios](https://axios-http.com/docs/intro)
