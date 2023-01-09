@@ -13,7 +13,7 @@ const getHomeList2 = async () => {
     return [
         {
             slug: 'originals',
-            title: 'Oiginais do Netflix',
+            title: 'Originais do Netflix',
             items: await basicFetch(`/discover/tv?with_network=213&language=pt-BR&api_key=${API_KEY}`)
         },
         {
