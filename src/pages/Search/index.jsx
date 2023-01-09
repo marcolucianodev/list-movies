@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { MovieBox, MoviesContent, SearchMovieContainer } from "./styles";
 import Loader from "../../components/Loader";
+import axios from "axios";
 
 
 const Search = () => {
@@ -18,9 +19,10 @@ const Search = () => {
 
         const getSearchMovies = async () => {
             try {
-                const response = await fetch(`${BASE_URL}?&language=pt-BR&api_key=${API_KEY}&query=${query}`)
-                const data = await response.json()
-                setSearchMovies(data.results)
+                const response = await axios.get(`${BASE_URL}?&language=pt-BR&api_key=${API_KEY}&query=${query}`)
+                const data = response.data.results
+                setSearchMovies(data)
+                console.log(data)
             } catch (error) {
                 console.log(error)
             }
